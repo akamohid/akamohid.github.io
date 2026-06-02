@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohid Arshad — Data Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">MA</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#experience" onclick="closeMobile()">Experience</a>
+      <a href="#projects" onclick="closeMobile()">Projects</a>
+      <a href="#skills" onclick="closeMobile()">Skills</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <canvas id="heroCanvas"></canvas>
+      <div class="grid-lines"></div>
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tag fade-in" style="animation-delay:0.1s">BS Data Science · SEECS, NUST '27</p>
+      <h1 class="hero-name fade-in" style="animation-delay:0.3s">Mohid<br/><span>Arshad</span></h1>
+      <p class="hero-sub fade-in" style="animation-delay:0.5s">
+        Building at the intersection of<br/>
+        <span class="rotating-text" id="rotatingText">Deep Learning</span>
+      </p>
+      <div class="hero-chips fade-in" style="animation-delay:0.65s">
+        <span class="chip">Computer Vision</span>
+        <span class="chip">LLMs</span>
+        <span class="chip">Data Engineering</span>
+        <span class="chip">Affective Computing</span>
+      </div>
+      <div class="hero-btns fade-in" style="animation-delay:0.8s">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="https://github.com/akamohid" target="_blank" class="btn-ghost">GitHub</a>
+      </div>
+    </div>
+    <div class="scroll-hint fade-in" style="animation-delay:1.2s">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01 / About</div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="section-title">Who I Am</h2>
+          <p class="about-text">I'm a Final-year BS Data Science student at SEECS, NUST — building real things at the intersection of deep learning, computer vision, and data engineering.</p>
+          <p class="about-text">My research interests span Computer Vision, Large Language Models, Deep Learning, Affective Computing, Business Intelligence, and Big Data. I've shipped production-grade ML systems, RAG pipelines, full-stack apps, and data warehouses.</p>
+          <p class="about-text">Outside of academics, I direct events at GDG on Campus NUST.</p>
+        </div>
+        <div class="about-right">
+          <div class="about-card reveal">
+            <div class="about-card-row">
+              <span class="about-card-label">Degree</span>
+              <span class="about-card-val">BS Data Science</span>
+            </div>
+            <div class="about-card-row">
+              <span class="about-card-label">University</span>
+              <span class="about-card-val">SEECS, NUST</span>
+            </div>
+            <div class="about-card-row">
+              <span class="about-card-label">Graduation</span>
+              <span class="about-card-val">2027</span>
+            </div>
+            <div class="about-card-row">
+              <span class="about-card-label">Location</span>
+              <span class="about-card-val">Islamabad, PK</span>
+            </div>
+            <div class="about-card-divider"></div>
+            <div class="about-card-row">
+              <span class="about-card-label">Runner-Up</span>
+              <span class="about-card-val">FAST NASCON Ciphers '25</span>
+            </div>
+            <div class="about-card-row">
+              <span class="about-card-label">Winner</span>
+              <span class="about-card-val">COMSATS Math Olympiad '23</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">02 / Experience</div>
+      <h2 class="section-title">Where I've Worked</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">May 2025 – Present</div>
+          <div class="timeline-content">
+            <h3>Director of Event Management</h3>
+            <p class="timeline-org"><a href="https://instagram.com/gdgnust" target="_blank">Google Developer Group (GDG) on Campus NUST ↗</a></p>
+            <p class="timeline-desc">Planned and carried out technical hackathons, workshops, and developer community events for 100+ attendees.</p>
+            <span class="timeline-tag">Leadership</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Sep 2025</div>
+          <div class="timeline-content">
+            <h3>Admin Coord Director</h3>
+            <p class="timeline-org">Orientation'25 · SEECS, NUST</p>
+            <p class="timeline-desc">Executed administrative operations for SEECS Orientation'25 — managing event scheduling, student onboarding, and coordinating cross-functional teams across design, logistics, and outreach.</p>
+            <span class="timeline-tag">Operations</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jul – Aug 2025</div>
+          <div class="timeline-content">
+            <h3>Quantum Machine Learning Researcher</h3>
+            <p class="timeline-org"><a href="https://www.thecetqap.com/" target="_blank">Centre of Excellence for Technology, Quantum &amp; AI (CETQAP) ↗</a></p>
+            <p class="timeline-desc">Built a 4-qubit Quantum Multilayered Awareness model (Hadamard + CZ layers), simulated on Aer (1,024 shots) and run on IBM Brisbane hardware, achieving near-uniform distribution across 16 states — indicating maximal superposition.</p>
+            <span class="timeline-tag">Quantum ML</span>
+            <span class="timeline-tag">Qiskit</span>
+            <span class="timeline-tag">IBM Quantum</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jun – Jul 2025</div>
+          <div class="timeline-content">
+            <h3>Artificial Intelligence Intern</h3>
+            <p class="timeline-org"><a href="https://www.spsnet.com/contact-us/contactus-pk.php" target="_blank">Software Productivity Strategists (SPS) ↗</a></p>
+            <p class="timeline-desc">Learned to build AI-powered chatbots using IBM watsonX, gaining hands-on experience with the platform for developing and integrating enterprise AI assistants.</p>
+            <span class="timeline-tag">IBM watsonX</span>
+            <span class="timeline-tag">AI</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">03 / Projects</div>
+      <h2 class="section-title">Things I've Built</h2>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cv">Computer Vision</button>
+        <button class="filter-btn" data-filter="llm">LLM / NLP</button>
+        <button class="filter-btn" data-filter="data">Data / BI</button>
+        <button class="filter-btn" data-filter="dev">Web / Mobile</button>
+        <button class="filter-btn" data-filter="systems">Systems</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card reveal" data-cat="cv">
+          <div class="project-cat">CV · DL</div>
+          <h3>DualStream-FER</h3>
+          <p>Hybrid CNN-Transformer for simultaneous macro/micro facial expression recognition. ResNet-50 + 6-layer ViT for macro; ResNet-18 + Temporal Transformer for micro sub-500ms expressions.</p>
+          <div class="project-stats"><span>Macro: 56% acc</span><span>Micro: 67% acc</span></div>
+          <div class="project-tech"><span>PyTorch</span><span>ViT</span><span>ResNet</span><span>MTCNN</span></div>
+          <a href="https://github.com/akamohid/DualStream-FER" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="cv">
+          <div class="project-cat">CV · DL</div>
+          <h3>Fine-Grained Dog Breed Classification</h3>
+          <p>ResNet-50 vs. EfficientNet-B3 ablation on Stanford Dogs (20,580 images, 120 breeds). Two-stage fine-tuning with augmentation ablation across 5 configs and 3 seeds. Grad-CAM validation.</p>
+          <div class="project-stats"><span>88.58% Top-1 Acc</span><span>p = 0.0012</span></div>
+          <div class="project-tech"><span>PyTorch</span><span>ResNet-50</span><span>EfficientNet-B3</span><span>Grad-CAM</span></div>
+          <a href="https://github.com/akamohid/The-Not-So-Secret-Life-of-Dogs" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="llm">
+          <div class="project-cat">LLM · RAG</div>
+          <h3>Talash – LLM Recruitment Agent</h3>
+          <p>RAG pipeline scoring CVs 0–100 across weighted sections. eSearch module verifies publications via CrossRef &amp; PubMed APIs. FastAPI + SQLAlchemy backend with exponential-backoff retry.</p>
+          <div class="project-tech"><span>LangChain</span><span>Gemini 2.0</span><span>FastAPI</span><span>RAG</span></div>
+          <a href="https://github.com/tmehmoodbsds23seecs/talash-llm-recruitment" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="data">
+          <div class="project-cat">DWBI · Data Engineering</div>
+          <h3>GlobalHealth-DL: Medallion Pipeline</h3>
+          <p>Bronze → Silver → Gold ETL pipeline over WHO health data for 193 countries. SHA-256 row hashing, quarantine schema for validation failures, and Power BI Gold dashboards.</p>
+          <div class="project-tech"><span>SQL Server</span><span>Power BI</span><span>ETL</span><span>SHA-256</span></div>
+          <a href="https://github.com/akamohid/GlobalHealth-DL" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="data">
+          <div class="project-cat">ML · Quantitative Finance</div>
+          <h3>PSX QuantAnalyst Pro</h3>
+          <p>KNN BUY/SELL classifier on 10 years of PSX data with lag returns, RSI, SMA, and volatility features. Monte Carlo simulation of 50 price paths. Live Streamlit dashboard.</p>
+          <div class="project-tech"><span>Scikit-learn</span><span>KNN</span><span>Streamlit</span><span>yfinance</span></div>
+          <a href="https://github.com/tmehmoodbsds23seecs/psx-quant-analyst" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="data">
+          <div class="project-cat">BI · Data Visualization</div>
+          <h3>F1 Championship Analytics</h3>
+          <p>3-page Star Schema Power BI dashboard over 600K+ lap records (1950–2020). Surfaces constructor dominance, lap-consistency correlations, DNF analysis, and circuit geography via DAX KPIs.</p>
+          <div class="project-tech"><span>Power BI</span><span>DAX</span><span>Star Schema</span><span>Python</span></div>
+          <a href="https://github.com/akamohid/F1" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="dev">
+          <div class="project-cat">MAD · ML</div>
+          <h3>SmartStox – PSX Trading Platform</h3>
+          <p>Ensemble of 5 ML classifiers (RF, GBM, SVM, KNN, LR) for BUY/SELL/HOLD signals via majority voting. Monte Carlo risk simulation, candlestick charts, Material 3 dark Flutter UI.</p>
+          <div class="project-tech"><span>Flutter</span><span>Flask</span><span>Scikit-learn</span><span>Firebase</span></div>
+          <a href="https://github.com/akamohid/SmartStox" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="dev">
+          <div class="project-cat">WebDev</div>
+          <h3>StreamSphere – Video Streaming Platform</h3>
+          <p>Full-stack MVC streaming platform with JWT auth, AWS S3 video storage, WebRTC P2P streaming, and a full social layer — likes, comments, subscriptions, playlists.</p>
+          <div class="project-tech"><span>Node.js</span><span>React</span><span>WebRTC</span><span>AWS S3</span></div>
+          <a href="https://github.com/akamohid/StreamSphere" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="llm">
+          <div class="project-cat">NLP · ML</div>
+          <h3>Emotion-Aware Text Classifier</h3>
+          <p>Multi-class emotion classifier on 500K tweets &amp; reviews using TF-IDF n-grams + VADER. Benchmarked 8 ML models with full feature attribution explainability. SVM best at 77% accuracy.</p>
+          <div class="project-tech"><span>TF-IDF</span><span>VADER</span><span>SVM</span><span>Scikit-learn</span></div>
+          <a href="https://github.com/akamohid/EMOTION-AWARE-TEXT-CLASSIFIER" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="llm">
+          <div class="project-cat">ML · Data Mining</div>
+          <h3>Student Stress Level Predictor</h3>
+          <p>3-class classifier (Low/Medium/High) on 1,100-record survey (21 features) with PCA. Comparison of 6 classifiers with full eval dashboard. Decision Tree: 89% F1 score.</p>
+          <div class="project-tech"><span>Scikit-learn</span><span>PCA</span><span>Pandas</span><span>Matplotlib</span></div>
+          <a href="https://github.com/akamohid/STRESS-LEVEL-PREDICTOR" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="systems">
+          <div class="project-cat">AI · Search · Optimization</div>
+          <h3>AI Nonogram Puzzle Solver</h3>
+          <p>Solves arbitrary N×M nonograms via Simulated Annealing with configurable cooling schedule and random-restart. Includes research paper, unit test suite, and Turtle-graphics visual output.</p>
+          <div class="project-tech"><span>Simulated Annealing</span><span>Python</span><span>Constraint Satisfaction</span></div>
+          <a href="https://github.com/akamohid/AI-NONOGRAM-PUZZLE-SOLVER" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="systems">
+          <div class="project-cat">PDC · Distributed Systems</div>
+          <h3>RideSync – Distributed Ride-Matching</h3>
+          <p>Master-worker socket architecture for ride-matching at 3 scale tiers: up to 200K drivers / 1M riders. Raw Java socket programming, multi-threading, CSV export, and performance plotting.</p>
+          <div class="project-tech"><span>Java</span><span>Socket Programming</span><span>Multi-threading</span><span>Maven</span></div>
+          <a href="https://github.com/akamohid/RideSync" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="systems">
+          <div class="project-cat">InfoSec · Cryptography</div>
+          <h3>ERFC – Enhanced Rail-Fence Cipher</h3>
+          <p>4-layer cipher: emoji substitution → spiral matrix transposition → salt &amp; length encryption → SHA-256 integrity hash. Includes research paper, CLI, and full test suite.</p>
+          <div class="project-tech"><span>Python</span><span>SHA-256</span><span>Cryptography</span><span>CLI</span></div>
+          <a href="https://github.com/akamohid/ENHANCED-RAIL-FENCE-CIPHER" target="_blank" class="project-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-cat="systems">
+          <div class="project-cat">DSA · Game Dev</div>
+          <h3>3D Tower Defense Game</h3>
+          <p>3D tower defense in Unreal Engine 5 with A*-driven enemy pathfinding, wave-based spawning, and real-time tower placement and upgrade. Implemented in C++ with Blueprint integration.</p>
+          <div class="project-tech"><span>Unreal Engine 5</span><span>C++</span><span>A* Pathfinding</span><span>Blueprint</span></div>
+          <a href="https://drive.google.com/drive/folders/16v1sJPKGRbnT7UjaOTRWy_CXJG6ljt_P" target="_blank" class="project-link">View Project ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">04 / Skills</div>
+      <h2 class="section-title">Technical Arsenal</h2>
+      <div class="skills-pillars">
+
+        <div class="pillar-card reveal" data-color="green" data-num="01">
+          <span class="pillar-num">01</span>
+          <h3 class="pillar-title">Machine Learning<br>&amp; Deep Learning</h3>
+          <p class="pillar-sub">Neural networks, model training &amp; production deployment at scale</p>
+          <div class="pillar-stack">
+            <span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>HuggingFace</span>
+          </div>
+        </div>
+
+        <div class="pillar-card reveal" data-color="purple" data-num="02">
+          <span class="pillar-num">02</span>
+          <h3 class="pillar-title">Computer Vision</h3>
+          <p class="pillar-sub">Image processing, object detection &amp; affective computing systems</p>
+          <div class="pillar-stack">
+            <span>OpenCV</span><span>YOLOv8</span><span>DeepFace</span><span>MediaPipe</span>
+          </div>
+        </div>
+
+        <div class="pillar-card reveal" data-color="cyan" data-num="03">
+          <span class="pillar-num">03</span>
+          <h3 class="pillar-title">Full Stack<br>Development</h3>
+          <p class="pillar-sub">End-to-end web &amp; mobile apps, REST APIs &amp; real-time systems</p>
+          <div class="pillar-stack">
+            <span>React</span><span>Node.js</span><span>FastAPI</span><span>Flutter</span>
+          </div>
+        </div>
+
+        <div class="pillar-card reveal" data-color="green" data-num="04">
+          <span class="pillar-num">04</span>
+          <h3 class="pillar-title">Big Data<br>&amp; Analytics</h3>
+          <p class="pillar-sub">ETL pipelines, BI dashboards &amp; data warehouse architecture</p>
+          <div class="pillar-stack">
+            <span>Power BI</span><span>Tableau</span><span>SQL Server</span><span>Pandas</span>
+          </div>
+        </div>
+
+        <div class="pillar-card reveal" data-color="purple" data-num="05">
+          <span class="pillar-num">05</span>
+          <h3 class="pillar-title">LLM Engineering<br>&amp; NLP</h3>
+          <p class="pillar-sub">RAG pipelines, vector search &amp; language model deployment</p>
+          <div class="pillar-stack">
+            <span>LangChain</span><span>FAISS</span><span>HuggingFace</span><span>Ollama</span>
+          </div>
+        </div>
+
+        <div class="pillar-card reveal" data-color="cyan" data-num="06">
+          <span class="pillar-num">06</span>
+          <h3 class="pillar-title">Data Engineering</h3>
+          <p class="pillar-sub">Medallion architecture, scalable pipelines &amp; cloud storage</p>
+          <div class="pillar-stack">
+            <span>ETL</span><span>PostgreSQL</span><span>MongoDB</span><span>Firebase</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">05 / Contact</div>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-sub">Open to research collaborations, internships, and interesting projects.</p>
+      <div class="contact-grid">
+        <a href="mailto:akamohid@gmail.com" class="contact-card reveal">
+          <span class="contact-icon">✉</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-val">akamohid@gmail.com</span>
+        </a>
+        <a href="https://linkedin.com/in/akamohid" target="_blank" class="contact-card reveal">
+          <span class="contact-icon">in</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-val">in/akamohid</span>
+        </a>
+        <a href="https://github.com/akamohid" target="_blank" class="contact-card reveal">
+          <span class="contact-icon">&#x2387;</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-val">akamohid</span>
+        </a>
+        <a href="https://instagram.com/akamohid" target="_blank" class="contact-card reveal">
+          <span class="contact-icon">&#x25C8;</span>
+          <span class="contact-label">Instagram</span>
+          <span class="contact-val">@akamohid</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Mohid Arshad · SEECS, NUST · <a target="_blank">akamohid</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
